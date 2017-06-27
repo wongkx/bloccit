@@ -30,3 +30,5 @@ source 'https://rubygems.org'
  gem 'turbolinks'
  
 gem 'tzinfo-data'
+
+gem 'bootstrap-sass'
