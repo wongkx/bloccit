@@ -33,3 +33,5 @@ source 'https://rubygems.org'
 gem 'tzinfo-data'
 
 gem 'bootstrap-sass'
+
+gem 'bcrypt'
