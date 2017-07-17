@@ -8,6 +8,29 @@ require 'random_data'
     )
 end
 
+
+admin2 = User.create!(
+    name: 'Admin User',
+    email:    'admin2@example.com',
+    password: 'helloworld',
+    role:     'admin'
+)
+ 
+member = User.create!(
+    name:     'Member User',
+    email:    'member@example.com',
+    password: 'helloworld'
+)
+
+moderator = User.create!(
+    name:     'Moderator User',
+    email:    'moderator@example.com',
+    password: 'helloworld',
+    role:     'moderator'
+)
+
+users = User.all
+
 15.times do
     Topic.create!(
         name:  RandomData.random_sentence,
@@ -33,20 +56,7 @@ posts = Post.all
     )
 end
 
-admin = User.create!(
-    name: 'Admin User',
-    email:    'admin@example.com',
-    password: 'helloworld',
-    role:     'admin'
-)
- 
-member = User.create!(
-    name:     'Member User',
-    email:    'member@example.com',
-    password: 'helloworld'
-)
 
-users = User.all
 
 puts "Seed finished"
 puts "#{User.count} users create"
