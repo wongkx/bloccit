@@ -28,6 +28,13 @@ RSpec.describe Post, type: :model do
       end
   end
   
+  describe "after_create" do
+    it "increases the number of Vote by 1" do
+      expect(post.votes.count).to eq(1)
+      #post.create 
+    end
+  end
+  
   describe "voting" do
     before do
       3.times { post.votes.create!(value: 1) }
