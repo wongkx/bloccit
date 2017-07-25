@@ -35,3 +35,5 @@ gem 'tzinfo-data'
 gem 'bootstrap-sass'
 
 gem 'bcrypt'
+
+gem 'figaro', '1.0'
