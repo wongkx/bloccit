@@ -74,4 +74,16 @@ RSpec.describe Post, type: :model do
       end
     end
   end
+  
+  describe "after_create" do
+    before do
+      @another_user = User.new(name: "Bloccit User", email: "kevinwong6175@gmail.com", password: "helloworld") 
+      @another_post = topic.posts.new(title: title, body: body, user: @another_user) 
+    end
+    
+    it "send email after user creates a new post" do
+      expect(FavoriteMailer).to receive(:new_post).with(@another_user, @another_post).and_return(double(deliver_now: true))
+      @another_post.save!
+    end
+  end
 end
