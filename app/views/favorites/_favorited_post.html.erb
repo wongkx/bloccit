@@ -1,0 +1,6 @@
+<div>
+    <div><%= link_to post.title, topic_post_url(post.topic, post) %>
+    <%= image_tag post.user.avatar_url(48) %></div>
+    <small><%= "Number of votes: #{post.points}" %></small>
+    <small><%= "Number of comments: #{post.comments.count}" %></small>
+</div>

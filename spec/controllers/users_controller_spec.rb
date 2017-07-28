@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
     let(:new_user_attributes) do
         {
-            name: 'BlocHead',
-            email: 'blochead@bloc.io',
-            password: 'blochead',
-            password_confirmation: 'blochead'
+            name: 'Kevin Wong',
+            email: 'kevinwong6175@gmail.com',
+            password: 'helloworld',
+            password_confirmation: 'helloworld'
         }
     end
     

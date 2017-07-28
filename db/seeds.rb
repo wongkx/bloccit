@@ -21,6 +21,18 @@ member = User.create!(
     password: 'helloworld'
 )
 
+kevin = User.create!(
+    name:     'Member User',
+    email:    'kevinwong6175@gmail.com',
+    password: 'password'
+)
+
+canyon = User.create!(
+    name:     'Canyon',
+    email:    'canyon.the.malamute@gmail.com',
+    password: 'password'
+)
+
 users = User.all
 
 15.times do
